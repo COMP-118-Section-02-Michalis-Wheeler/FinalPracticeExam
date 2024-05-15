@@ -3,7 +3,6 @@
  *  \author Wheeler
  *   \date 15/05/2024
  */
-
 #include <iostream>
 #include <cassert>
 using namespace std;
@@ -43,6 +42,7 @@ int main() {
                 } while (eIdx < sIdx || eIdx > SIZE - 1);
                  cout << "\nSum: " << sumOfRange(arr, sIdx, eIdx, SIZE);
                 break;
+                
             case 2:
                 do {
                     cout << "\nEnter start index [0 -- " << SIZE - 1 << "]: ";
@@ -64,7 +64,9 @@ int main() {
                     cout << "\nAt-least one value is less than 0";
                 }
                 break;
-            case 4: cout << "\nHope to see you again!" << endl;
+            case 4:
+                
+                cout << "\nHope to see you again!" << endl;
                 break;
             default:
                 cerr << "\nWrong choice!";
