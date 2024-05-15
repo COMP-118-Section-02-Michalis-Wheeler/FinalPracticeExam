@@ -10,6 +10,7 @@ using namespace std;
 
  // Prototypes
 bool allPositive(const double arr[], const int maxSize);
+double productOfRange(const double arr[], const int sIdx, const int eIdx, const int maxSize);
 
 
 /**
@@ -74,4 +75,22 @@ bool allPositive( const double arr[], const int maxSize) {
     return ret;
     }
     
-
+/**
+ * Returns the sum of the specified range ( inclusive).
+ *  @param arr The array containing the values
+ *  @param sIdx The start of the range (inclusive).
+ *  @param eIdx The end of the range ( inclusive).
+ *  @param maxSize Length of the array
+ *  @return Returns the sum of the range ( inclusive).
+ */
+double productOfRange(const double arr[], const int sIdx, const int eIdx, const int maxSize) {
+    assert(maxSize > 0);
+    assert(eIdx >= sIdx && maxSize > eIdx && sIdx >= 0);
+    double sum = 0.0;
+    
+    for (int i=sIdx; i <= eIdx; i++) {
+        sum += arr[i];
+    }
+    
+    return sum;
+}
