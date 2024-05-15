@@ -33,11 +33,14 @@ int main() {
         
         switch (choice) {
             case 1:
-                cout << "\nEnter start index [0 -- " << SIZE - 1 << "]: ";
-                cin >> sIdx;
-                
-                cout << "\nEnter end index [" << sIdx << " -- " << SIZE - 1 << "]: ";
-                cin >> eIdx;
+                do {
+                    cout << "\nEnter start index [0 -- " << SIZE - 1 << "]: ";
+                    cin >> sIdx;
+                } while (sIdx < 0 || sIdx > SIZE - 1);
+                do {
+                    cout << "\nEnter end index [" << sIdx << " -- " << SIZE - 1 << "]: ";
+                    cin >> eIdx;
+                } while (eIdx < sIdx || eIdx > SIZE - 1);
                  cout << "\nSum: " << sumOfRange(arr, sIdx, eIdx, SIZE);
                 break;
             case 2:
