@@ -41,7 +41,7 @@
 		8F4386952BF48CEE000CF29D = {
 			isa = PBXGroup;
 			children = (
-				8F4386A02BF48CEE000CF29D /* FinalPractiseExam */,
+				8F4386A02BF48CEE000CF29D /* FinalPracticeExam */,
 				8F43869F2BF48CEE000CF29D /* Products */,
 			);
 			sourceTree = "<group>";
@@ -54,12 +54,12 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		8F4386A02BF48CEE000CF29D /* FinalPractiseExam */ = {
+		8F4386A02BF48CEE000CF29D /* FinalPracticeExam */ = {
 			isa = PBXGroup;
 			children = (
 				8F4386A12BF48CEE000CF29D /* main.cpp */,
 			);
-			path = FinalPractiseExam;
+			path = FinalPracticeExam;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
