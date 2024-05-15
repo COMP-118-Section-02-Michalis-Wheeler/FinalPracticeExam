@@ -10,7 +10,7 @@ using namespace std;
 
  // Prototypes
 bool allPositive(const double arr[], const int maxSize);
-double productOfRange(const double arr[], const int sIdx, const int eIdx, const int maxSize);
+double sumOfRange(const double arr[], const int sIdx, const int eIdx, const int maxSize);
 
 
 /**
@@ -20,7 +20,7 @@ double productOfRange(const double arr[], const int sIdx, const int eIdx, const 
 int main() {
     
     const int SIZE = 5;
-    int choice;
+    int choice, sIdx, eIdx;
     double arr[SIZE] = { 1.3, 2.2, -3.5, 0.0, 10.2 };
     
     do {
@@ -33,6 +33,12 @@ int main() {
         
         switch (choice) {
             case 1:
+                cout << "\nEnter start index [0 -- " << SIZE - 1 << "]: ";
+                cin >> sIdx;
+                
+                cout << "\nEnter end index [" << sIdx << " -- " << SIZE - 1 << "]: ";
+                cin >> eIdx;
+                 cout << "\nSum: " << sumOfRange(arr, sIdx, eIdx, SIZE);
                 break;
             case 2:
                 break;
@@ -83,7 +89,7 @@ bool allPositive( const double arr[], const int maxSize) {
  *  @param maxSize Length of the array
  *  @return Returns the sum of the range ( inclusive).
  */
-double productOfRange(const double arr[], const int sIdx, const int eIdx, const int maxSize) {
+double sumOfRange(const double arr[], const int sIdx, const int eIdx, const int maxSize) {
     assert(maxSize > 0);
     assert(eIdx >= sIdx && maxSize > eIdx && sIdx >= 0);
     double sum = 0.0;
