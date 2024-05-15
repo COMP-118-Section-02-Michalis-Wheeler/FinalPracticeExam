@@ -5,11 +5,11 @@
  */
 
 #include <iostream>
-
+#include <cassert>
 using namespace std;
 
  // Prototypes
-bool allPositive(double arr[], int maxSize);
+bool allPositive(const double arr[], const int maxSize);
 
 
 /**
@@ -61,7 +61,8 @@ int main() {
  *  @return Returns <code>true</code> if all values are 0 or greater
  *       <code>false</code> otherwise.
  */
-bool allPositive(double arr[], int maxSize) {
+bool allPositive( const double arr[], const int maxSize) {
+    assert(maxSize > 0);
     bool ret = true;
     int idx = 0;
     
