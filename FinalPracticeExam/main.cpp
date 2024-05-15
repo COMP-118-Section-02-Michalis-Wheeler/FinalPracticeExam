@@ -11,7 +11,7 @@ using namespace std;
  // Prototypes
 bool allPositive(const double arr[], const int maxSize);
 double sumOfRange(const double arr[], const int sIdx, const int eIdx, const int maxSize);
-
+double productOfRange(const double arr[], const int sIdx, const int eIdx, const int maxSize);
 
 /**
  *The driver of the program
@@ -44,6 +44,16 @@ int main() {
                  cout << "\nSum: " << sumOfRange(arr, sIdx, eIdx, SIZE);
                 break;
             case 2:
+                do {
+                    cout << "\nEnter start index [0 -- " << SIZE - 1 << "]: ";
+                    cin >> sIdx;
+                } while (sIdx < 0 || sIdx > SIZE - 1);
+                
+                do {
+                    cout << "\nEnter end index [" << sIdx << " -- " << SIZE - 1 << "]: ";
+                    cin >> eIdx;
+                } while (eIdx < sIdx || eIdx > SIZE - 1);
+                cout << "\nProduct: " << productOfRange(arr, sIdx, eIdx, SIZE);
                 break;
             case 3:
                 
@@ -102,4 +112,23 @@ double sumOfRange(const double arr[], const int sIdx, const int eIdx, const int 
     }
     
     return sum;
+}
+
+/**
+ * Returns the product of the specified range ( inclusive).
+ *  @param arr The array containing the values
+ *  @param sIdx The start of the range (inclusive).
+ *  @param eIdx The end of the range ( inclusive).
+ *  @param maxSize Length of the array
+ *  @return Returns the sum of the range ( inclusive).
+ */
+double productOfRange(const double arr[], const int sIdx, const int eIdx, const int maxSize) {
+    assert(maxSize > 0);
+    assert(eIdx >= sIdx && maxSize > eIdx && sIdx >= 0);
+    double product = 0.0;
+    for (int i=sIdx; i <= eIdx; i++) {
+        product *= arr[i];
+    }
+    
+    return product;
 }
