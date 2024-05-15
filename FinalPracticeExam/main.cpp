@@ -17,7 +17,10 @@ bool allPositive(double arr[], int maxSize);
  * @return Returns 0.
  */
 int main() {
+    
+    const int SIZE = 5;
     int choice;
+    double arr[SIZE] = { 1.3, 2.2, -3.5, 0.0, 10.2 };
     
     do {
         cout << "\n1) Sum of range";
@@ -33,6 +36,13 @@ int main() {
             case 2:
                 break;
             case 3:
+                
+                if(allPositive(arr, SIZE) == true) {
+                    cout << "\nAll values are positive";
+                }
+                else {
+                    cout << "\nAt-least one value is less than 0";
+                }
                 break;
             case 4: cout << "\nHope to see you again!" << endl;
                 break;
